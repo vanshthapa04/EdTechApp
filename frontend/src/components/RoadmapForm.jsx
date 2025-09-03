@@ -67,7 +67,7 @@ function RoadmapForm({ onSubmit }) {
   try {
     const requestBody = { studentData: payload };
 
-    const r = await fetch("http://localhost:3001/api/generate-roadmap", {
+    const r = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/generate-roadmap`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(requestBody),

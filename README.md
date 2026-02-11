@@ -1,4 +1,4 @@
-# 🎓 krishEdTech
+# 🎓 EdTechApp
 
 An ed-tech project with a React (Vite) frontend and Node.js/Express backend.
 
@@ -6,7 +6,7 @@ An ed-tech project with a React (Vite) frontend and Node.js/Express backend.
 
 ## 🚀 Project Structure
 
-krishEdTech/
+EdTechApp/
 │── backend/ # Node.js + Express API
 │── frontend/ # React + Vite frontend
 
@@ -68,5 +68,5 @@ git init
 git add .
 git commit -m "Initial commit: project setup with frontend & backend"
 git branch -M main
-git remote add origin https://github.com/Krish7789/krishEdTech.git
+git remote add origin https://github.com/vanshthapa04/EdTechApp
 git push -u origin main

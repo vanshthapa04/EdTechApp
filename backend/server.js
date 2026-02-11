@@ -3,6 +3,7 @@ import cors from "cors";
 import bodyParser from "body-parser";
 import axios from "axios";
 import dotenv from "dotenv";
+import cheerio from "cheerio";
 
 dotenv.config();
 
@@ -107,13 +108,16 @@ Here's an example of a week-wise roadmap—each week is a single structured obje
     // additional weeks ...
   ]
   // possibly include recommended resources, tips, etc.
+
 }
 
 Generate a detailed ${numberOfWeeks}-week roadmap for this student:
 ${JSON.stringify(studentData)}
+Important Note: Please give valid links only.
 
 Output only the JSON object — no extra text.
 Do not return empty weeks or empty arrays.
+
 `;
 
 
@@ -172,7 +176,7 @@ Do not return empty weeks or empty arrays.
 
 } catch (err) {
   console.error("Full error object:", err);
-  if (err.response?.data) console.error("Response data:", err.response.data);
+  if (err.response?.data) console.error("Response Data:", err.response.data);
   const message = err.response?.data?.error || err.message || "Unknown server error";
   res.status(err.response?.status || 500).json({ error: message });
 }

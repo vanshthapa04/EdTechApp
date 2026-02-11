@@ -3,7 +3,7 @@ import cors from "cors";
 import bodyParser from "body-parser";
 import axios from "axios";
 import dotenv from "dotenv";
-import cheerio from "cheerio";
+
 
 dotenv.config();
 
